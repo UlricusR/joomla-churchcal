@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.9.0" client="site" method="upgrade">
+    <name>Church Calendar</name>
+    <author>Ulrich Rueth</author>
+    <version>1.0.0</version>
+    <description>Displays a calendar taken from ChurchTools</description>
+    <files>
+        <filename>mod_churchcal.xml</filename>
+        <filename module="mod_churchcal">mod_churchcal.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <scriptfile>script.php</scriptfile>
+</extension>
