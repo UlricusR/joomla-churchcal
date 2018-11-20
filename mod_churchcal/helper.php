@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 class ModChurchCalHelper
 {
-	public $cookies = array();
+//	public $cookies = array();
 	
 	public static function getCookies() {
   		global $cookies;

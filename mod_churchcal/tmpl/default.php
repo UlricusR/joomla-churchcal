@@ -9,10 +9,20 @@ $weekdays = array('Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Fr
 $caldata = json_decode(json_encode($result->data), true);
 
 // Display calendar items TODO Configure parameters to show
+$displayItems = array();
 foreach($caldata as $calitem) {
-	$weekday = $weekdays[date('w', strtotime($calitem['startdate']))];
+	$sortdate = strtotime($calitem['startdate']);
+	$weekday = $weekdays[date('w', $sortdate)];
 	$date = explode(' ', $calitem['startdate']);
 	$startdate = implode('.', array_reverse(explode('-', $date[0])));
 	$time = explode(':', $date[1]);
-	echo "<p>$weekday, $startdate, $time[0]:$time[1] Uhr: $calitem[bezeichnung]</p>";
+	$displayItems[] = array("timestamp" => $sortdate, "displayString" => "<p>$weekday, $startdate, $time[0]:$time[1] Uhr: $calitem[bezeichnung]</p>");
 }
+
+// Sorting
+if ($params['calsorting'] == '0') asort($displayItems);
+else arsort($displayItems);
+
+// Display
+foreach($displayItems as $displayItem)
+	echo $displayItem['displayString'];
