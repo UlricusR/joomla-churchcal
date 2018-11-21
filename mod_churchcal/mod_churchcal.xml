@@ -49,11 +49,47 @@
 	    			hint="14"
 	    			description="TODO"
 	    			pattern="[0-9]+" />
-	    		<field name="calsorting" type="list" default="0" label="Sorting"
+	    		<field
+	    			name="calsorting"
+	    			type="list"
+	    			default="0"
+	    			label="Sorting"
 					description="TODO">
 					<option value="0">Ascending</option>
 					<option value="1">Descending</option>
 				</field>
+				<field
+					name="caldisplayweekday"
+					type="radio"
+					label="Display weekday"
+					default="1"
+					description="TODO">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="calweekdayseparator"
+					type="text"
+					label="Weekday separator"
+					class="btn-group"
+					showon="caldisplayweekday:1"
+	    			default=", "
+	    			hint=", "
+	    			description="TODO" />
+	    		<field
+	    			name="caldatetimeformat"
+					type="text"
+					label="Calendar date/time format"
+	    			default="j.n.y, G:i"
+	    			hint="j.n.y, G:i"
+	    			description="TODO" />
+				<field
+					name="caldescriptionseparator"
+					type="text"
+					label="Description separator"
+					default=": "
+	    			hint=": "
+	    			description="TODO" />
 	    	</fieldset>
 	    </fields>
     </config>

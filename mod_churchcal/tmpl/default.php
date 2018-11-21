@@ -11,12 +11,30 @@ $caldata = json_decode(json_encode($result->data), true);
 // Display calendar items TODO Configure parameters to show
 $displayItems = array();
 foreach($caldata as $calitem) {
+	// Create DateTime instance with calitem's start date&time
+	// TODO configure DateTimeZone
+	$dateTime = new DateTime($calitem['startdate'], new DateTimeZone('Europe/Berlin'));
+	
+	// Create a timestamp that we'll use for sorting later
 	$sortdate = strtotime($calitem['startdate']);
-	$weekday = $weekdays[date('w', $sortdate)];
-	$date = explode(' ', $calitem['startdate']);
-	$startdate = implode('.', array_reverse(explode('-', $date[0])));
-	$time = explode(':', $date[1]);
-	$displayItems[] = array("timestamp" => $sortdate, "displayString" => "<p>$weekday, $startdate, $time[0]:$time[1] Uhr: $calitem[bezeichnung]</p>");
+	
+	// Create the string representation of the date / time
+	$displayString = '<p>';
+	if ($params['caldisplayweekday'] == 1) {
+		$displayString .= $weekdays[$dateTime->format('w')];
+		$displayString .= $params['calweekdayseparator'];
+	}
+	$displayString .= $dateTime->format($params['caldatetimeformat']);
+	
+	// Add description
+	$displayString .= $params['caldescriptionseparator'];
+	$displayString .= $calitem['bezeichnung'];
+	
+	// Finalize string representation
+	$displayString .= '</p>';
+	
+	// Add display string to array
+	$displayItems[] = array('timestamp' => $sortdate, 'displayString' => $displayString);
 }
 
 // Sorting
