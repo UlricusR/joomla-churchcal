@@ -68,6 +68,16 @@
 					<option value="0">JNO</option>
 				</field>
 				<field
+					name="calweekdayformat"
+					type="radio"
+					label="MOD_CHURCHCAL_FIELD_CALWEEKDAYFORMAT"
+					showon="caldisplayweekday:1"
+					default="long"
+					description="MOD_CHURCHCAL_FIELD_CALWEEKDAYFORMAT_DESC">
+					<option value="long">MOD_CHURCHCAL_FIELD_CALWEEKDAYFORMAT_LONG</option>
+					<option value="short">MOD_CHURCHCAL_FIELD_CALWEEKDAYFORMAT_SHORT</option>
+				</field>
+				<field
 					name="calweekdayseparator"
 					type="text"
 					label="MOD_CHURCHCAL_FIELD_CALWEEKDAYSEPARATOR"
