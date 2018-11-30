@@ -13,7 +13,9 @@ $displayItems = array();
 foreach($caldata as $calitem) {
 	// Create DateTime instance with calitem's start date&time
 	// TODO configure DateTimeZone
-	$dateTime = new DateTime($calitem['startdate'], new DateTimeZone('Europe/Berlin'));
+	$timezone = new DateTimeZone('Europe/Berlin');
+	$startdate = new DateTime($calitem['startdate'], $timezone);
+	$enddate = new DateTime($calitem['enddate'], $timezone);
 	
 	// Create a timestamp that we'll use for sorting later
 	$sortdate = strtotime($calitem['startdate']);
@@ -21,10 +23,16 @@ foreach($caldata as $calitem) {
 	// Create the string representation of the date / time
 	$displayString = '<p>';
 	if ($params['caldisplayweekday'] == 1) {
-		$displayString .= $weekdays[$dateTime->format('w')];
+		$displayString .= $weekdays[$startdate->format('w')];
 		$displayString .= $params['calweekdayseparator'];
 	}
-	$displayString .= $dateTime->format($params['caldatetimeformat']);
+	$displayString .= $startdate->format($params['caldateformat']);
+	$displayString .= $params['calstarttimeseparator'];
+	$displayString .= $startdate->format($params['caltimeformat']);
+	if ($params['caldisplayendtime'] == 1) {
+		$displayString .= $params['calendtimeseparator'];
+		$displayString .= $enddate->format($params['caltimeformat']);
+	}
 	
 	// Add description
 	$displayString .= $params['caldescriptionseparator'];

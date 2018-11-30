@@ -77,12 +77,43 @@
 	    			hint=", "
 	    			description="MOD_CHURCHCAL_FIELD_CALWEEKDAYSEPARATOR_DESC" />
 	    		<field
-	    			name="caldatetimeformat"
+	    			name="caldateformat"
 					type="text"
-					label="MOD_CHURCHCAL_FIELD_CALDATETIMEFORMAT"
-	    			default="j.n.y, G:i"
-	    			hint="j.n.y, G:i"
-	    			description="MOD_CHURCHCAL_FIELD_CALDATETIMEFORMAT_DESC" />
+					label="MOD_CHURCHCAL_FIELD_CALDATEFORMAT"
+	    			default="j.n.y"
+	    			hint="j.n.y"
+	    			description="MOD_CHURCHCAL_FIELD_CALDATEFORMAT_DESC" />
+	    		<field
+	    			name="caltimeformat"
+					type="text"
+					label="MOD_CHURCHCAL_FIELD_CALTIMEFORMAT"
+	    			default="G:i"
+	    			hint="G:i"
+	    			description="MOD_CHURCHCAL_FIELD_CALTIMEFORMAT_DESC" />
+				<field
+					name="calstarttimeseparator"
+					type="text"
+					label="MOD_CHURCHCAL_FIELD_CALSTARTTIMESEPARATOR"
+					default=", "
+	    			hint=", "
+	    			description="MOD_CHURCHCAL_FIELD_CALSTARTTIMESEPARATOR_DESC" />
+				<field
+					name="caldisplayendtime"
+					type="radio"
+					label="MOD_CHURCHCAL_FIELD_CALDISPLAYENDTIME"
+					default="0"
+					description="MOD_CHURCHCAL_FIELD_CALDISPLAYENDTIME_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="calendtimeseparator"
+					type="text"
+					label="MOD_CHURCHCAL_FIELD_CALENDTIMESEPARATOR"
+					showon="caldisplayendtime:1"
+					default="-"
+	    			hint="-"
+	    			description="MOD_CHURCHCAL_FIELD_CALENDTIMESEPARATOR_DESC" />
 				<field
 					name="caldescriptionseparator"
 					type="text"
