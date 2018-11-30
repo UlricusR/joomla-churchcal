@@ -25,17 +25,20 @@
 	    		<field
 	    			name="calurl"
 	    			type="URL"
+	    			required="true"
 	    			label="MOD_CHURCHCAL_FIELD_CATURL"
 	    			description="MOD_CHURCHCAL_FIELD_CATURL_DESC" />
 	    		<field
 	    			name="calids"
 	    			type="text"
+	    			required="true"
 	    			label="MOD_CHURCHCAL_FIELD_CATIDS"
 	    			description="MOD_CHURCHCAL_FIELD_CATIDS_DESC"
 	    			pattern="[0-9]+([,][0-9]+)*" />
 	    		<field
 	    			name="calfrom"
 	    			type="text"
+	    			required="true"
 	    			label="MOD_CHURCHCAL_FIELD_CALFROM"
 	    			default="0"
 	    			hint="0"
@@ -44,6 +47,7 @@
 	    		<field
 	    			name="calto"
 	    			type="text"
+	    			required="true"
 	    			label="MOD_CHURCHCAL_FIELD_CALTO"
 	    			default="14"
 	    			hint="14"
@@ -52,6 +56,7 @@
 	    		<field
 	    			name="calsorting"
 	    			type="list"
+	    			required="true"
 	    			default="0"
 	    			label="MOD_CHURCHCAL_FIELD_CALSORTING"
 					description="MOD_CHURCHCAL_FIELD_CALSORTING_DESC">
@@ -61,6 +66,7 @@
 				<field
 					name="caldisplayweekday"
 					type="radio"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALDISPLAYWEEKDAY"
 					default="1"
 					description="MOD_CHURCHCAL_FIELD_CALDISPLAYWEEKDAY_DESC">
@@ -70,6 +76,7 @@
 				<field
 					name="calweekdayformat"
 					type="radio"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALWEEKDAYFORMAT"
 					showon="caldisplayweekday:1"
 					default="long"
@@ -78,8 +85,16 @@
 					<option value="short">MOD_CHURCHCAL_FIELD_CALWEEKDAYFORMAT_SHORT</option>
 				</field>
 				<field
+					name="caluserlanguage"
+					type="text"
+					label="MOD_CHURCHCAL_FIELD_CALUSERLANGUAGE"
+					showon="caldisplayweekday:1"
+	    			hint="e.g.: en-GB, de-DE"
+	    			description="MOD_CHURCHCAL_FIELD_CALUSERLANGUAGE_DESC" />
+				<field
 					name="calweekdayseparator"
 					type="text"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALWEEKDAYSEPARATOR"
 					class="btn-group"
 					showon="caldisplayweekday:1"
@@ -89,6 +104,7 @@
 	    		<field
 	    			name="caldateformat"
 					type="text"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALDATEFORMAT"
 	    			default="j.n.y"
 	    			hint="j.n.y"
@@ -96,6 +112,7 @@
 	    		<field
 	    			name="caltimeformat"
 					type="text"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALTIMEFORMAT"
 	    			default="G:i"
 	    			hint="G:i"
@@ -103,6 +120,7 @@
 				<field
 					name="calstarttimeseparator"
 					type="text"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALSTARTTIMESEPARATOR"
 					default=", "
 	    			hint=", "
@@ -110,6 +128,7 @@
 				<field
 					name="caldisplayendtime"
 					type="radio"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALDISPLAYENDTIME"
 					default="0"
 					description="MOD_CHURCHCAL_FIELD_CALDISPLAYENDTIME_DESC">
@@ -119,6 +138,7 @@
 				<field
 					name="calendtimeseparator"
 					type="text"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALENDTIMESEPARATOR"
 					showon="caldisplayendtime:1"
 					default="-"
@@ -127,6 +147,7 @@
 				<field
 					name="caldescriptionseparator"
 					type="text"
+	    			required="true"
 					label="MOD_CHURCHCAL_FIELD_CALDESCRIPTIONSEPARATOR"
 					default=": "
 	    			hint=": "

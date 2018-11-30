@@ -2,8 +2,18 @@
 // No direct access
 defined('_JEXEC') or die;
 
-// Define weekdays TODO Localize
-$weekdays = array('Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag');
+// Load language file, set default language to en-GB
+$language =& JFactory::getLanguage();
+$language->setDefault('en-GB');
+$extension = 'mod_churchcal';
+$base_dir = JPATH_SITE;
+$user_language_tag = $params['caluserlanguage'];
+if (!$language->load($extension, $base_dir, $user_language_tag, true)) $language->load($extension, $base_dir, $language->getTag(), true);
+
+// Define weekdays
+$weekdays = array();
+if ($params['calweekdayformat'] == 'short') $weekdays = explode(',', $language->_("MOD_CHURCHCAL_WEEKDAYS_SHORT"));
+else $weekdays = explode(',', $language->_("MOD_CHURCHCAL_WEEKDAYS_LONG"));
 
 // Decode Object delivered by CT ChurchCal
 $caldata = json_decode(json_encode($result->data), true);
