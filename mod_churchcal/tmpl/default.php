@@ -12,10 +12,8 @@ $caldata = json_decode(json_encode($result->data), true);
 $displayItems = array();
 foreach($caldata as $calitem) {
 	// Create DateTime instance with calitem's start date&time
-	// TODO configure DateTimeZone
-	$timezone = new DateTimeZone('Europe/Berlin');
-	$startdate = new DateTime($calitem['startdate'], $timezone);
-	$enddate = new DateTime($calitem['enddate'], $timezone);
+	$startdate = new DateTime($calitem['startdate']);
+	$enddate = new DateTime($calitem['enddate']);
 	
 	// Create a timestamp that we'll use for sorting later
 	$sortdate = strtotime($calitem['startdate']);
