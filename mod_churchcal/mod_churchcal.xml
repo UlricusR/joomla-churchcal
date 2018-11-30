@@ -153,6 +153,14 @@
 	    			hint=": "
 	    			description="MOD_CHURCHCAL_FIELD_CALDESCRIPTIONSEPARATOR_DESC" />
 	    	</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3" />
+			</fieldset>
 	    </fields>
     </config>
 	<languages folder="language">
