@@ -44,6 +44,7 @@ foreach($caldata as $calitem) {
 	
 	// Add description
 	$displayString .= $params['caldescriptionseparator'];
+	if ($params['calbreakbeforedescription'] == 1) $displayString .= '<br/>';
 	$displayString .= $calitem['bezeichnung'];
 	
 	// Finalize string representation

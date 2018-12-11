@@ -8,7 +8,7 @@
 	 <license>Code released under the [GNU GPL 3.0]
 		(https://github.com/UlricusR/joomla-churchcal/blob/master/LICENSE) license.
 	 </license>
-	 <version>1.0.0</version>
+	 <version>1.1.0</version>
     <description>MOD_CHURCHCAL_DESC</description>
     <files>
         <filename>mod_churchcal.xml</filename>
@@ -152,6 +152,16 @@
 					default=": "
 	    			hint=": "
 	    			description="MOD_CHURCHCAL_FIELD_CALDESCRIPTIONSEPARATOR_DESC" />
+				<field
+					name="calbreakbeforedescription"
+					type="radio"
+	    			required="true"
+					label="MOD_CHURCHCAL_FIELD_CALBREAKBEFOREDESCRIPTION"
+					default="0"
+					description="MOD_CHURCHCAL_FIELD_CALBREAKBEFOREDESCRIPTION_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 	    	</fieldset>
 			<fieldset name="advanced">
 				<field
