@@ -2,3 +2,4 @@
 mod_churchcal/.DS_Store
 *.xml~
 *.php~
+.DS_Store

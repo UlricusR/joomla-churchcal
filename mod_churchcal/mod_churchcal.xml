@@ -10,7 +10,7 @@
 	 </license>
 	 <version>1.2.0</version>
 	 <updateservers>
-			<server type="extension" name="Church Calendar" priority="1">https://github.com/UlricusR/joomla-churchcal/blob/master/churchcal_update.xml</server>
+			<server type="extension" name="Church Calendar" priority="1">https://rueth.info/churchcal_update.xml</server>
 	 </updateservers>
     <description>MOD_CHURCHCAL_DESC</description>
     <files>
