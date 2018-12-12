@@ -2,6 +2,8 @@
 Joomla module to retrieve calendar data from ChurchTools and display it on the web site
 
 ## Releases
+### v1.2.0 / 12.12.2018:
+* Added auto-update
 ### v1.1.0 / 11.12.2018:
 * Added option to insert page break before description
 ### v1.0.0 / 30.11.2018:
