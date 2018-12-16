@@ -18,7 +18,7 @@ else $weekdays = explode(',', $language->_("MOD_CHURCHCAL_WEEKDAYS_LONG"));
 // Decode Object delivered by CT ChurchCal
 $caldata = json_decode(json_encode($result->data), true);
 
-// Display calendar items TODO Configure parameters to show
+// Display calendar items
 $displayItems = array();
 foreach($caldata as $calitem) {
 	// Create DateTime instance with calitem's start date&time
