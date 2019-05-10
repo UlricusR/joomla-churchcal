@@ -18,9 +18,16 @@ else $weekdays = explode(',', $language->_("MOD_CHURCHCAL_WEEKDAYS_LONG"));
 // Decode Object delivered by CT ChurchCal
 $caldata = json_decode(json_encode($result->data), true);
 
+// Get max. number of calendar entries
+$maxcalentries = $params['calentries'];
+$calcounter = 0;
+
 // Display calendar items
 $displayItems = array();
 foreach($caldata as $calitem) {
+    // Increase calcounter and check if further entries are desired
+    if ($maxcalentries <> '' && $calcounter++ >= $maxcalentries) break;
+    
 	// Create DateTime instance with calitem's start date&time
 	$startdate = new DateTime($calitem['startdate']);
 	$enddate = new DateTime($calitem['enddate']);

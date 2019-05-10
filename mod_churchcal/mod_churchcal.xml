@@ -8,7 +8,7 @@
 	 <license>Code released under the [GNU GPL 3.0]
 		(https://github.com/UlricusR/joomla-churchcal/blob/master/LICENSE) license.
 	 </license>
-	 <version>1.2.0</version>
+	 <version>1.3.0</version>
 	 <updateservers>
 			<server type="extension" name="Church Calendar" priority="1">https://rueth.info/churchcal_update.xml</server>
 	 </updateservers>
@@ -56,6 +56,13 @@
 	    			hint="14"
 	    			description="MOD_CHURCHCAL_FIELD_CALTO_DESC"
 	    			pattern="[0-9]+" />
+	    		<field
+	    		    name="calentries"
+	    		    type="text"
+	    		    required="false"
+	    		    label="MOD_CHURCHCAL_FIELD_CALENTRIES"
+	    		    description="MOD_CHURCHCAL_FIELD_CALENTRIES_DESC"
+	    		    pattern="[0-9]+" />
 	    		<field
 	    			name="calsorting"
 	    			type="list"
