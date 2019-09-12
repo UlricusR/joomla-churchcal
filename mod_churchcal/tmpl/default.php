@@ -2,8 +2,11 @@
 // No direct access
 defined('_JEXEC') or die;
 
+// Imports
+use Joomla\CMS\Factory;
+
 // Load language file, set default language to en-GB
-$language =& JFactory::getLanguage();
+$language =& Factory::getLanguage();
 $language->setDefault('en-GB');
 $extension = 'mod_churchcal';
 $base_dir = JPATH_SITE;

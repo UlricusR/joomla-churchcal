@@ -3,7 +3,7 @@
  * @package     Joomla.Site
  * @subpackage  mod_churchcal
  *
- * @copyright   Copyright (C) 2018 Ulrich Rueth, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2018 Ulrich Rueth. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
  
