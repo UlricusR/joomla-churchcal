@@ -38,7 +38,7 @@ class mod_churchCalInstallerScript
 	 */
 	function update($parent) 
 	{
-		echo '<p>The module has been updated to version' . $parent->get('manifest')->version . '</p>';
+	    echo '<p>The module has been updated to version ' . $parent->manifest->version . '</p>';
 	}
 
 	/**
@@ -50,7 +50,7 @@ class mod_churchCalInstallerScript
 	 */
 	function preflight($type, $parent) 
 	{
-		echo '<p>Anything here happens before the installation/update/uninstallation of the module</p>';
+		//echo '<p>Anything here happens before the installation/update/uninstallation of the module</p>';
 	}
 
 	/**
@@ -62,6 +62,6 @@ class mod_churchCalInstallerScript
 	 */
 	function postflight($type, $parent) 
 	{
-		echo '<p>Anything here happens after the installation/update/uninstallation of the module</p>';
+		//echo '<p>Anything here happens after the installation/update/uninstallation of the module</p>';
 	}
 }

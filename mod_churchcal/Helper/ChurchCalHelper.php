@@ -6,10 +6,11 @@
  * @copyright   Copyright (C) 2018 Ulrich Rueth. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+namespace RuethInfo\Module\ChurchCal\Site\Helper;
  
 defined('_JEXEC') or die;
 
-class ModChurchCalHelper
+class ChurchCalHelper
 {
 //	public $cookies = array();
 	

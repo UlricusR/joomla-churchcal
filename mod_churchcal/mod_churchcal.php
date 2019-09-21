@@ -13,9 +13,7 @@ defined('_JEXEC') or die;
 // Imports
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\Registry\Registry;
-
-// Include the churchcal functions only once
-JLoader::register('ModChurchcalHelper', __DIR__ . '/helper.php');
+use RuethInfo\Module\ChurchCal\Site\Helper\ChurchCalHelper;
 
 // Get mod_churchcal parameters
 $module = ModuleHelper::getModule('mod_churchcal');
@@ -29,7 +27,7 @@ $data = array(
 	'category_ids' => explode(',', $params['calids']),
 	'from' => $params['calfrom'],  
 	'to' => $params['calto']);
-$result = modChurchCalHelper::sendRequest($url, $data);
+$result = ChurchCalHelper::sendRequest($url, $data);
 if ($result->status == "fail") {
   echo $result->data;
   return;
