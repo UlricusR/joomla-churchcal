@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="mod_churchcal"/>
+	<buildpathentry kind="lib" path="releases/mod_churchcal_1.0.0.zip"/>
+	<buildpathentry kind="lib" path="releases/mod_churchcal_1.1.0.zip"/>
+	<buildpathentry kind="lib" path="releases/mod_churchcal_1.2.0.zip"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry combineaccessrules="false" kind="prj" path="/joomla-cms"/>
+</buildpath>

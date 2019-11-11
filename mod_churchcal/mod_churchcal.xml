@@ -68,6 +68,16 @@
 					<option value="1">MOD_CHURCHCAL_FIELD_CALSORTING_DESCENDING</option>
 				</field>
 				<field
+					name="callistformat"
+					type="list"
+	    			required="true"
+					label="MOD_CHURCHCAL_FIELD_CALLISTFORMAT"
+					default="0"
+					description="MOD_CHURCHCAL_FIELD_CALLISTFORMAT_DESC">
+					<option value="0">MOD_CHURCHCAL_FIELD_CALLISTFORMAT_PARAGRAPHS</option>
+					<option value="1">MOD_CHURCHCAL_FIELD_CALLISTFORMAT_BULLETS</option>
+				</field>
+				<field
 					name="caldisplayweekday"
 					type="radio"
 	    			required="true"
