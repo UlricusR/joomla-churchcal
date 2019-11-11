@@ -1,4 +1,4 @@
-<?php 
+<?php
 // No direct access
 defined('_JEXEC') or die;
 
@@ -27,16 +27,16 @@ $displayItems = array();
 foreach($caldata as $calitem) {
     // Increase calcounter and check if further entries are desired
     if ($maxcalentries <> '' && $calcounter++ >= $maxcalentries) break;
-    
+
 	// Create DateTime instance with calitem's start date&time
 	$startdate = new DateTime($calitem['startdate']);
 	$enddate = new DateTime($calitem['enddate']);
-	
+
 	// Create a timestamp that we'll use for sorting later
 	$sortdate = strtotime($calitem['startdate']);
-	
+
 	// Create the string representation of the date / time
-	$displayString = '<p>';
+	$displayString = ($params['callistformat'] == 0) ?  '<p>' : '<li>';
 	if ($params['caldisplayweekday'] == 1) {
 		$displayString .= $weekdays[$startdate->format('w')];
 		$displayString .= $params['calweekdayseparator'];
@@ -48,15 +48,15 @@ foreach($caldata as $calitem) {
 		$displayString .= $params['calendtimeseparator'];
 		$displayString .= $enddate->format($params['caltimeformat']);
 	}
-	
+
 	// Add description
 	$displayString .= $params['caldescriptionseparator'];
 	if ($params['calbreakbeforedescription'] == 1) $displayString .= '<br/>';
 	$displayString .= $calitem['bezeichnung'];
-	
+
 	// Finalize string representation
-	$displayString .= '</p>';
-	
+	$displayString .= ($params['callistformat'] == 0) ?  '</p>' : '</li>';
+
 	// Add display string to array
 	$displayItems[] = array('timestamp' => $sortdate, 'displayString' => $displayString);
 }
@@ -66,5 +66,7 @@ if ($params['calsorting'] == '0') asort($displayItems);
 else arsort($displayItems);
 
 // Display
+if ($params['callistformat'] == 1) echo '<ul>';
 foreach($displayItems as $displayItem)
 	echo $displayItem['displayString'];
+if ($params['callistformat'] == 1) echo '</ul>';
