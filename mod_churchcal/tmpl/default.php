@@ -26,7 +26,7 @@ $calcounter = 0;
 $displayItems = array();
 foreach($caldata as $calitem) {
     // Increase calcounter and check if further entries are desired
-    if ($maxcalentries <> '' && $calcounter++ >= $maxcalentries) break;
+    // if ($maxcalentries <> '' && $calcounter++ >= $maxcalentries) break;
 
 	// Create DateTime instance with calitem's start date&time
 	$startdate = new DateTime($calitem['startdate']);
@@ -56,6 +56,7 @@ foreach($caldata as $calitem) {
 
 	// Finalize string representation
 	$displayString .= ($params['callistformat'] == 0) ?  '</p>' : '</li>';
+	
 
 	// Add display string to array
 	$displayItems[] = array('timestamp' => $sortdate, 'displayString' => $displayString);
@@ -65,8 +66,11 @@ foreach($caldata as $calitem) {
 if ($params['calsorting'] == '0') asort($displayItems);
 else arsort($displayItems);
 
+// Slice items after $maxcalentries items
+$slicedDisplayItems = array_slice($displayItems, 0, $maxcalentries);
+
 // Display
 if ($params['callistformat'] == 1) echo '<ul>';
-foreach($displayItems as $displayItem)
+foreach($slicedDisplayItems as $displayItem)
 	echo $displayItem['displayString'];
 if ($params['callistformat'] == 1) echo '</ul>';
