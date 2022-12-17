@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://ulricusr.github.io/joomla-churchcal/configuration/</loc>
+         <lastmod>2022-12-17</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://ulricusr.github.io/joomla-churchcal/en/configuration/"/>
+         <xhtml:link rel="alternate" hreflang="de" href="https://ulricusr.github.io/joomla-churchcal/de/configuration/"/>
+         
+    </url>
+    <url>
+         <loc>https://ulricusr.github.io/joomla-churchcal/</loc>
+         <lastmod>2022-12-17</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://ulricusr.github.io/joomla-churchcal/en/"/>
+         <xhtml:link rel="alternate" hreflang="de" href="https://ulricusr.github.io/joomla-churchcal/de/"/>
+         
+    </url>
+    <url>
+         <loc>https://ulricusr.github.io/joomla-churchcal/installation/</loc>
+         <lastmod>2022-12-17</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://ulricusr.github.io/joomla-churchcal/en/installation/"/>
+         <xhtml:link rel="alternate" hreflang="de" href="https://ulricusr.github.io/joomla-churchcal/de/installation/"/>
+         
+    </url>
+    <url>
+         <loc>https://ulricusr.github.io/joomla-churchcal/usage/</loc>
+         <lastmod>2022-12-17</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://ulricusr.github.io/joomla-churchcal/en/usage/"/>
+         <xhtml:link rel="alternate" hreflang="de" href="https://ulricusr.github.io/joomla-churchcal/de/usage/"/>
+         
+    </url>
+</urlset>
