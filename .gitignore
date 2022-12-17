@@ -1,6 +1,6 @@
 
-mod_churchcal/.DS_Store
+.DS_Store
 *.xml~
 *.php~
-.DS_Store
 *.zip
+.project
