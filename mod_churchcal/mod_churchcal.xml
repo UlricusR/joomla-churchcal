@@ -4,13 +4,13 @@
     <author>Ulrich Rueth</author>
 	 <authorEmail>code@rueth.info</authorEmail>
 	 <authorUrl>http://www.rueth.info</authorUrl>
-	 <copyright>Copyright 2018-2020 Ulrich Rueth</copyright>
+	 <copyright>Copyright 2018-2022 Ulrich Rueth</copyright>
 	 <license>Code released under the [GNU GPL 3.0]
 		(https://github.com/UlricusR/joomla-churchcal/blob/master/LICENSE) license.
 	 </license>
-	 <version>1.4.1</version>
+	 <version>1.4.2</version>
 	 <updateservers>
-			<server type="extension" name="Church Calendar" priority="1">https://rueth.info/churchcal_update.xml</server>
+			<server type="extension" name="Church Calendar" priority="1">https://config.rueth.info/churchcal_update.xml</server>
 	 </updateservers>
     <description>MOD_CHURCHCAL_DESC</description>
     <files>
