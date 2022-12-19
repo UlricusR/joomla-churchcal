@@ -1,5 +1,5 @@
 site_name: ChurchCal for Joomla
-site_url: https://ulricusr.github.io/joomla-churchcal
+site_url: https://www.rueth.info/joomla-churchcal
 repo_url: https://github.com/UlricusR/joomla-churchcal
 edit_uri: edit/site-sources/docs/
 
@@ -45,11 +45,11 @@ plugins:
         en:
           name: English
           site_name: ChurchCal for Joomla
-          homepage: https://ulricusr.github.io/en
+          homepage: https://www.rueth.info/en
         de:
           name: Deutsch
           site_name: ChurchCal für Joomla 4
-          homepage: https://ulricusr.github.io/de
+          homepage: https://www.rueth.info/de
   - search
   - glightbox
 
