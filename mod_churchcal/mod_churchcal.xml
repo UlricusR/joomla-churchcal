@@ -31,6 +31,12 @@
 	    			required="true"
 	    			label="MOD_CHURCHCAL_FIELD_CATURL"
 	    			description="MOD_CHURCHCAL_FIELD_CATURL_DESC" />
+				<field
+	    			name="calapikey"
+	    			type="URLtext"
+	    			required="true"
+	    			label="MOD_CHURCHCAL_FIELD_API_KEY"
+	    			description="MOD_CHURCHCAL_FIELD_API_KEY_DESC" />
 	    		<field
 	    			name="calids"
 	    			type="text"
