@@ -56,6 +56,7 @@ class ModChurchCalHelper
             exit;
         }
         return $obj;
-    }
+   	 }
+	}
 
 }
