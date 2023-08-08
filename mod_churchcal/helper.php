@@ -32,31 +32,33 @@ class ModChurchCalHelper
   		}
 	}
 
-	public static function sendRequest($url, $data, $calpikey) {
+	use Joomla\Http\HttpFactory;
 
-    // Erstellen des HTTP-Objekts
-    $http = \Joomla\Http\HttpFactory::getHttp();
-
-    // Setzen der Header für die Anfrage
-    $headers = array(
-        'Authorization' => $apicalkey,
-        'Accept' => 'application/json'
-    );
-
-    // API-Anfrage durchführen
-    $response = $http->get($url, $data, $headers);
-
-    // Überprüfen auf Fehler
-    if ($response->code != 200) {
-        echo 'Fehler: ' . $response->message;
-    } else {
-        $obj = json_decode($response->body);
-        if ($obj->status == 'error') {
-            echo "Fehler: $obj->message";
-            exit;
-        }
-        return $obj;
-   	 }
+	public static function sendRequest($url, $data, $apicalkey) {
+		// Erstellen des HTTP-Objekts
+		$httpFactory = new HttpFactory();
+		$http = $httpFactory->getHttp();
+	
+		// Setzen der Header für die Anfrage
+		$headers = array(
+			'Authorization' => $apicalkey,
+			'Accept' => 'application/json'
+		);
+	
+		// API-Anfrage durchführen
+		$response = $http->get($url, $data, $headers);
+	
+		// Überprüfen auf Fehler
+		if ($response->code != 200) {
+			echo 'Fehler: ' . $response->message;
+		} else {
+			$obj = json_decode($response->body);
+			if ($obj->status == 'error') {
+				echo "Fehler: $obj->message";
+				exit;
+			}
+			return $obj;
+		}
 	}
 
 }
