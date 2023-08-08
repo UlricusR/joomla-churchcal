@@ -32,8 +32,6 @@ class ModChurchCalHelper
   		}
 	}
 
-	use Joomla\Http\HttpFactory;
-
 	public static function sendRequest($url, $data, $apicalkey) {
 		// Erstellen des HTTP-Objekts
 		$httpFactory = new HttpFactory();
