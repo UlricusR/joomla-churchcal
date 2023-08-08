@@ -37,13 +37,13 @@ $calcounter = 0;
 
 //$calendarData = json_decode($result->data);
 
-foreach ($result->data as $event) {
-    echo "Veranstaltungsname: " . $event->base->caption . "\n";
-    echo "Notiz: " . $event->base->note . "\n";
-    echo "Startdatum: " . $event->base->startDate . "\n";
-    echo "Enddatum: " . $event->base->endDate . "\n";
+//foreach ($result->data as $event) {
+//    echo "Veranstaltungsname: " . $event->base->caption . "\n";
+//    echo "Notiz: " . $event->base->note . "\n";
+//    echo "Startdatum: " . $event->base->startDate . "\n";
+//    echo "Enddatum: " . $event->base->endDate . "\n";
     // ... weitere Ausgaben für jede Veranstaltung ...
-    echo "\n"; // Leerzeile zwischen den Veranstaltungen
+//    echo "\n"; // Leerzeile zwischen den Veranstaltungen
 }
 
 // Anzahl der Veranstaltungen ausgeben
@@ -87,7 +87,6 @@ foreach($result->data as $calitem) {
 	// Finalize string representation
 	$displayString .= ($params['callistformat'] == 0) ?  '</p>' : '</li>';
 	
-
 	// Add display string to array
 	$displayItems[] = array('timestamp' => $sortdate, 'displayString' => $displayString);
 }
