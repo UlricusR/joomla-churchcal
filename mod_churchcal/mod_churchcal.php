@@ -22,16 +22,25 @@ $params = new JRegistry($module->params);
 // URL example: 'https://<meine-kirch>.church.tools/api/calendars/appointments?calendar_ids<ids>&from=<yyyy-mm-dd>&to=<yyyy-mm-dd>'
 
 $url = $params['calurl'];
+
+$daysToAdd = $params['calfrom'];
+$dateFrom = date("Y-m-d", strtotime("+$daysToAdd days"));
+
+$daysToAdd = $params['calto'];
+$dateTo =date("Y-m-d", strtotime("+$daysToAdd days"));
+
 $data = array(
-	'func' => 'getCalendarEvents', 
+	//'func' => 'getCalendarEvents', 
 	'calendar_ids' => explode(',', $params['calids']),
-	'from' => $params['calfrom'],  
-	'to' => $params['calto']);
+	'from' => $dateFrom,  
+	'to' => $dateTo);
 $calapikey = 'Login ' . $params['calapikey'];
 $result = modChurchCalHelper::sendRequest($url, $data, $calapikey);
 if ($result->status == "fail") {
   echo $result->data;
   return;
 }
-	
+
+echo $result->data;
+
 require JModuleHelper::getLayoutPath('mod_churchcal');

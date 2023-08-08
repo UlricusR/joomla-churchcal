@@ -41,16 +41,39 @@ class ModChurchCalHelper
 		// Setzen der Header für die Anfrage
 		$headers = array(
 			'Authorization' => $apicalkey,
-			'Accept' => 'application/json'
+			'content-type' => 'application/json'
 		);
-	
+
+		//echo 'Authorization:' . $apicalkey;		
+
+		// Basis-URL für den REST-Aufruf
+		$baseURL = $url;
+
+		// Generiere den Query-String aus den Parametern
+		$queryString = http_build_query($data);
+
+		// Füge den Query-String zur Basis-URL hinzu
+		$fullURL = $baseURL . '?' . $queryString;
+
+		// Jetzt kannst du $fullURL verwenden, um deinen REST-Aufruf durchzuführen
+		//echo $fullURL;
+
+		//echo $data['from'];
+		//echo $data['to'];
+
 		// API-Anfrage durchführen
-		$response = $http->get($url, $headers);
+		$response = $http->get($fullURL, $headers);
+		//echo $response->body;
 	
+		//print_r($response); // Zeigt den Inhalt des Response-Objekts an
+		// Oder
+		//var_dump($response); // Gibt eine detaillierte Darstellung des Response-Objekts aus
+		
+
 		// Überprüfen auf Fehler
 		if ($response->code != 200) {
 			echo 'Fehler: ' . $response->message;
-			echo 'Code: ' . $response->code;
+			//echo 'Code: ' . $response->code;
 		} else {
 			$obj = json_decode($response->body);
 			if ($obj->status == 'error') {
