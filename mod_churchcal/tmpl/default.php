@@ -82,7 +82,7 @@ foreach($result->data as $calitem) {
 	if ($params['calbreakbeforedescription'] == 1) $displayString .= '<br/>';
 	$displayString .= $calitem->base->caption;
 
-	//$displayString .= '(Notiz: ' . $calitem->base->note . ')';
+	$displayString .= '(Notiz: ' . $calitem->base->note . ')';
 
 	// Finalize string representation
 	$displayString .= ($params['callistformat'] == 0) ?  '</p>' : '</li>';
