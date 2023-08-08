@@ -9,7 +9,7 @@
  
  defined('_JEXEC') or die;
 
- use Joomla\Http\HttpFactory;
+ use Joomla\CMS\Http\HttpFactory;
 
 class ModChurchCalHelper
 {
@@ -35,9 +35,8 @@ class ModChurchCalHelper
 	}
 
 	public static function sendRequest($url, $data, $apicalkey) {
-		// Erstellen des HTTP-Objekts
-		$httpFactory = new HttpFactory();
-		$http = $httpFactory->getHttp();
+		// Get HTTP Factory.
+		$http = HttpFactory::getHttp();
 	
 		// Setzen der Header für die Anfrage
 		$headers = array(
@@ -46,11 +45,12 @@ class ModChurchCalHelper
 		);
 	
 		// API-Anfrage durchführen
-		$response = $http->get($url, $data, $headers);
+		$response = $http->get($url, $headers);
 	
 		// Überprüfen auf Fehler
 		if ($response->code != 200) {
 			echo 'Fehler: ' . $response->message;
+			echo 'Code: ' . $response->code;
 		} else {
 			$obj = json_decode($response->body);
 			if ($obj->status == 'error') {
