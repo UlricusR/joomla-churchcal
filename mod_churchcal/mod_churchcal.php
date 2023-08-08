@@ -17,15 +17,18 @@ JLoader::register('ModChurchcalHelper', __DIR__ . '/helper.php');
 $module = JModuleHelper::getModule('mod_churchcal');
 $params = new JRegistry($module->params);
 
-// Get Calendar events. Make sure the calendar is available for public user, TODO otherwise login before
-// URL example: 'https://ct-erlangen.feg.de/index.php?q=churchcal/ajax'
+// Get Calendar events.
+// Authorization with API Key
+// URL example: 'https://<meine-kirch>.church.tools/api/calendars/appointments?calendar_ids<ids>&from=<yyyy-mm-dd>&to=<yyyy-mm-dd>'
+
 $url = $params['calurl'];
 $data = array(
 	'func' => 'getCalendarEvents', 
-	'category_ids' => explode(',', $params['calids']),
+	'calendar_ids' => explode(',', $params['calids']),
 	'from' => $params['calfrom'],  
 	'to' => $params['calto']);
-$result = modChurchCalHelper::sendRequest($url, $data);
+$calapikey = 'Login ' . $params['calapikey'];
+$result = modChurchCalHelper::sendRequest($url, $data, $calapikey);
 if ($result->status == "fail") {
   echo $result->data;
   return;

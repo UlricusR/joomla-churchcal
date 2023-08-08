@@ -32,22 +32,30 @@ class ModChurchCalHelper
   		}
 	}
 
-	public static function sendRequest($url, $data) {
-  		$options = array(
-    		'http'=>array(
-//      			'header' => "Cookie: ". modChurchCalHelper::getCookies() . "\r\nContent-type: application/x-www-form-urlencoded\r\n",
-      			'method' => 'POST',
-      			'content' => http_build_query($data),
-    		)
-  		);
-  		$context = stream_context_create($options);
-  		$result = file_get_contents($url, false, $context);
-  		$obj = json_decode($result);
-  		if ($obj->status == 'error') {
-    		echo "There is an error: $obj->message";
-    		exit;
-  		}
-//  		modChurchCalHelper::saveCookies($http_response_header);
-  		return $obj;
-	}
+	public static function sendRequest($url, $data, $calpikey) {
+
+    // Erstellen des HTTP-Objekts
+    $http = \Joomla\Http\HttpFactory::getHttp();
+
+    // Setzen der Header für die Anfrage
+    $headers = array(
+        'Authorization' => $apicalkey,
+        'Accept' => 'application/json'
+    );
+
+    // API-Anfrage durchführen
+    $response = $http->get($url, $data, $headers);
+
+    // Überprüfen auf Fehler
+    if ($response->code != 200) {
+        echo 'Fehler: ' . $response->message;
+    } else {
+        $obj = json_decode($response->body);
+        if ($obj->status == 'error') {
+            echo "Fehler: $obj->message";
+            exit;
+        }
+        return $obj;
+    }
+
 }
