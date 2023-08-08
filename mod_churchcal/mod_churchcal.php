@@ -41,6 +41,6 @@ if ($result->status == "fail") {
   return;
 }
 
-echo $result->data;
+//echo $result->data;
 
 require JModuleHelper::getLayoutPath('mod_churchcal');
