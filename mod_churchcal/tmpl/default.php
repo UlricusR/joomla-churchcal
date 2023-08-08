@@ -44,7 +44,7 @@ $calcounter = 0;
 //    echo "Enddatum: " . $event->base->endDate . "\n";
     // ... weitere Ausgaben für jede Veranstaltung ...
 //    echo "\n"; // Leerzeile zwischen den Veranstaltungen
-}
+//}
 
 // Anzahl der Veranstaltungen ausgeben
 echo "Anzahl der Veranstaltungen: " . $result->meta->count . "\n";
