@@ -24,10 +24,10 @@ $params = new JRegistry($module->params);
 $url = $params['calurl'];
 
 $daysToAdd = $params['calfrom'];
-$dateFrom = date("Y-m-d", strtotime("+$daysToAdd days"));
+$dateFrom = date("y-m-d", strtotime("+$daysToAdd days"));
 
 $daysToAdd = $params['calto'];
-$dateTo =date("Y-m-d", strtotime("+$daysToAdd days"));
+$dateTo =date("y-m-d", strtotime("+$daysToAdd days"));
 
 $data = array(
 	//'func' => 'getCalendarEvents', 

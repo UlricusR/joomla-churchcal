@@ -55,11 +55,6 @@ class ModChurchCalHelper
 		// Füge den Query-String zur Basis-URL hinzu
 		$fullURL = $baseURL . '?' . $queryString;
 
-		// Jetzt kannst du $fullURL verwenden, um deinen REST-Aufruf durchzuführen
-		//echo $fullURL;
-
-		//echo $data['from'];
-		//echo $data['to'];
 
 		// API-Anfrage durchführen
 		$response = $http->get($fullURL, $headers);
