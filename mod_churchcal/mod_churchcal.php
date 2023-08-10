@@ -17,18 +17,49 @@ JLoader::register('ModChurchcalHelper', __DIR__ . '/helper.php');
 $module = JModuleHelper::getModule('mod_churchcal');
 $params = new JRegistry($module->params);
 
-// Get Calendar events. Make sure the calendar is available for public user, TODO otherwise login before
-// URL example: 'https://ct-erlangen.feg.de/index.php?q=churchcal/ajax'
+// Get Calendar events.
+// Authorization with API Key
+// URL example: 'https://<meine-kirch>.church.tools/api/calendars/appointments?calendar_ids<ids>&from=<yyyy-mm-dd>&to=<yyyy-mm-dd>'
+
 $url = $params['calurl'];
+
+var_dump($url);
+
+
+$daysToAddFrom = $params['calfrom'];
+if($dateFrom <> 0) {
+	$dateFrom = date("y-m-d", strtotime("+$daysToAddFrom days"));
+}
+
+$daysToAddTo = $params['calto'];
+if($daysToAddTo <> 0){
+	$dateTo =date("y-m-d", strtotime("+$daysToAdd days"));
+}
+
+echo(date("y-m-D", strtotime("+0 days") . "<br>"));
+echo(date('y-m-D', strtotime("+0 days") . "<br>"));
+echo(strtotime("+1 days") . "<br>");
+echo(strtotime("+114 days") . "<br>");
+
+var_dump($dateFrom);
+var_dump($dateTo);
+
 $data = array(
-	'func' => 'getCalendarEvents', 
-	'category_ids' => explode(',', $params['calids']),
-	'from' => $params['calfrom'],  
-	'to' => $params['calto']);
-$result = modChurchCalHelper::sendRequest($url, $data);
+	//'func' => 'getCalendarEvents', 
+	'calendar_ids' => explode(',', $params['calids']),
+	'from' => $dateFrom,  
+	'to' => $dateTo);
+$calapikey = 'Login ' . $params['calapikey'];
+
+var_dump($data);
+
+$result = modChurchCalHelper::sendRequest($url, $data, $calapikey);
 if ($result->status == "fail") {
   echo $result->data;
   return;
 }
-	
+
+//echo $result->data;
+var_dump($result->data);
+
 require JModuleHelper::getLayoutPath('mod_churchcal');
