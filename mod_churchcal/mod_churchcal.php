@@ -23,11 +23,18 @@ $params = new JRegistry($module->params);
 
 $url = $params['calurl'];
 
-$daysToAdd = $params['calfrom'];
-$dateFrom = date("y-m-d", strtotime("+$daysToAdd days"));
+$daysToAddFrom = $params['calfrom'];
+if($dateFrom <> 0) {
+	$dateFrom = date("y-m-d", strtotime("+$daysToAddFrom days"));
+}
 
-$daysToAdd = $params['calto'];
-$dateTo =date("y-m-d", strtotime("+$daysToAdd days"));
+$daysToAddTo = $params['calto'];
+if($daysToAddTo <> 0){
+	$dateTo =date("y-m-d", strtotime("+$daysToAdd days"));
+}
+
+var_dump($dateFrom);
+var_dump($dateTo);
 
 $data = array(
 	//'func' => 'getCalendarEvents', 
@@ -35,6 +42,9 @@ $data = array(
 	'from' => $dateFrom,  
 	'to' => $dateTo);
 $calapikey = 'Login ' . $params['calapikey'];
+
+var_dump($data);
+
 $result = modChurchCalHelper::sendRequest($url, $data, $calapikey);
 if ($result->status == "fail") {
   echo $result->data;
@@ -42,5 +52,6 @@ if ($result->status == "fail") {
 }
 
 //echo $result->data;
+var_dump($result->data);
 
 require JModuleHelper::getLayoutPath('mod_churchcal');
