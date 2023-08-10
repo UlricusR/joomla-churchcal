@@ -23,6 +23,8 @@ $params = new JRegistry($module->params);
 
 $url = $params['calurl'];
 
+var_dump($url);
+
 
 $daysToAddFrom = $params['calfrom'];
 if($dateFrom <> 0) {
@@ -34,7 +36,8 @@ if($daysToAddTo <> 0){
 	$dateTo =date("y-m-d", strtotime("+$daysToAdd days"));
 }
 
-echo(strtotime("+0 days") . "<br>");
+echo(date("y-m-D", strtotime("+0 days") . "<br>"));
+echo(date('y-m-D', strtotime("+0 days") . "<br>"));
 echo(strtotime("+1 days") . "<br>");
 echo(strtotime("+114 days") . "<br>");
 
