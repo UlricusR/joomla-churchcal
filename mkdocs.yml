@@ -1,10 +1,21 @@
+# Project information
 site_name: ChurchCal for Joomla
 site_url: https://www.rueth.info/joomla-churchcal
-repo_url: https://github.com/UlricusR/joomla-churchcal
+site_author: Ulrich Rüth
+site_description: >-
+  A Joomla! package for displaying CurchTools calendars on websites
 edit_uri: edit/site-sources/docs/
 
+# Repository
+repo_name: UlricusR/joomla-churchcal
+repo_url: https://github.com/UlricusR/joomla-churchcal
+
+
+# Configuration
 theme:
   name: material
+  features:
+    - navigation.tabs
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -25,6 +36,7 @@ theme:
   logo: assets/images/logo_white_small.png
   favicon: assets/images/favicon.png
 
+# Customization
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -32,27 +44,62 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/ulrichrueth/
 
+# Page tree
 nav:
-  - 'index.md'
-  - 'installation.md'
-  - 'configuration.md'
-  - 'usage.md'
+  - Project Overview: https://www.rueth.info
+  - EasyFPU for iOS: https://www.rueth.info/iOS-EasyFPU/
+  - EasyFPU for Android: https://www.rueth.info/Android-EasyFPU/
+  - EventList for Joomla: https://www.rueth.info/joomla4-eventlist/
+  - ChurchCal for Joomla:
+    - 'What is Joomla! ChurchCal?': 'index.md'
+    - 'Installation': 'installation.md'
+    - 'Configuration': 'configuration.md'
+    - 'Usage': 'usage.md'
+  - Legal Notice: https://www.rueth.info/legal/
 
+# Plugins
 plugins:
   - i18n:
-      default_language: en
       languages:
-        en:
+        - locale: en
           name: English
-          site_name: ChurchCal for Joomla
-          homepage: https://www.rueth.info/en
-        de:
+          build: true
+          default: true
+        - locale: de
           name: Deutsch
-          site_name: ChurchCal für Joomla 4
-          homepage: https://www.rueth.info/de
+          build: true
+          site_name: ChurchCal für Joomla
+          site_description: >-
+            Ein Joomla!-Paket zum Anzeigen von CurchCal-Kalendern
+          site_url: https://www.rueth.info/joomla-churchcal/de
+          nav_translations:
+            # Tab Menu
+            Project Overview: Projektübersicht
+            EasyFPU for iOS: EasyFPE für iOS
+            EasyFPU for Android: EasyFPE für Android
+            EventList for Joomla: EventList für Joomla
+            ChurchCal for Joomla: ChurchCal für Joomla
+            Legal Notice: Impressum und Datenschutz
+            # Page Menu
+            What is Joomla! ChurchCal?: Was ist Joomla! ChurchCal?
+            Installation: Installation
+            Configuration: Konfiguration
+            Usage: Nutzung
+          nav:
+            - Projektübersicht: https://www.rueth.info/de
+            - EasyFPE für iOS: https://www.rueth.info/iOS-EasyFPU/de/
+            - EasyFPE für Android: https://www.rueth.info/Android-EasyFPU/de/
+            - EventList für Joomla: https://www.rueth.info/joomla4-eventlist/de/
+            - ChurchCal für Joomla:
+              - 'Was ist Joomla! ChurchCal?': 'index.md'
+              - 'Installation': 'installation.md'
+              - 'Konfiguration': 'configuration.md'
+              - 'Nutzung': 'usage.md'
+            - Impressum und Datenschutz: https://www.rueth.info/de/legal/
   - search
   - glightbox
 
+# Extensions
 markdown_extensions:
   - admonition
   - pymdownx.details
