@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>https://www.rueth.info/joomla-churchcal/configuration/</loc>
-         <lastmod>2022-12-19</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/en/configuration/"/>
-         <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/configuration/"/>
-         
+        <loc>https://www.rueth.info/joomla-churchcal/configuration/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/dede/configuration/"/>
     </url>
     <url>
-         <loc>https://www.rueth.info/joomla-churchcal/</loc>
-         <lastmod>2022-12-19</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/en/"/>
-         <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/"/>
-         
+        <loc>https://www.rueth.info/joomla-churchcal/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/dede/"/>
     </url>
     <url>
-         <loc>https://www.rueth.info/joomla-churchcal/installation/</loc>
-         <lastmod>2022-12-19</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/en/installation/"/>
-         <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/installation/"/>
-         
+        <loc>https://www.rueth.info/joomla-churchcal/installation/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/installation/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/dede/installation/"/>
     </url>
     <url>
-         <loc>https://www.rueth.info/joomla-churchcal/usage/</loc>
-         <lastmod>2022-12-19</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/en/usage/"/>
-         <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/usage/"/>
-         
+        <loc>https://www.rueth.info/joomla-churchcal/usage/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/usage/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/dede/usage/"/>
+    </url>
+    <url>
+        <loc>https://www.rueth.info/joomla-churchcal/de/de/configuration/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/de/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/deconfiguration/"/>
+    </url>
+    <url>
+        <loc>https://www.rueth.info/joomla-churchcal/de/de/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/de"/>
+    </url>
+    <url>
+        <loc>https://www.rueth.info/joomla-churchcal/de/de/installation/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/de/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/deinstallation/"/>
+    </url>
+    <url>
+        <loc>https://www.rueth.info/joomla-churchcal/de/de/usage/</loc>
+        <lastmod>2023-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.rueth.info/joomla-churchcal/de/de/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.rueth.info/joomla-churchcal/deusage/"/>
     </url>
 </urlset>
